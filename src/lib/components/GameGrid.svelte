@@ -2,6 +2,7 @@
   import soundSrcClick from "../../assets/audio/click.mp3";
   import { score, time } from "../../store/store.js";
   import Modal from "./Modal.svelte";
+  import { onDestroy } from "svelte";
 
   let clickSound = new Audio(soundSrcClick);
 
@@ -149,6 +150,13 @@
       if (isGameClear) clearInterval(timer); // 게임 클리어시 타이머 중지
     }, 1000);
   }
+
+  // 컴포넌트 소멸 시 타이머 정리
+  onDestroy(() => {
+    if (timer) {
+      clearInterval(timer);
+    }
+  });
 
   // 게임 시작시 카드 랜덤하게 섞기
   shuffle();
