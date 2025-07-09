@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background-image: url("images/game-title.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Itim", "Comic Sans MS", cursive, system-ui, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.itim-regular {
+  font-family: "Itim", "Comic Sans MS", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 32px;
+  background: transparent;
+  border: none;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
